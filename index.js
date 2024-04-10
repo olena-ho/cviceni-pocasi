@@ -98,8 +98,8 @@ predpoved.forEach((dayWeather, index) => {
 const dayShortInfo = dayShortInfos[index];
   dayShortInfo.innerHTML = `
   <h2>${dayWeather.den}:</h2>
-  <p>Day temperature: ${dayWeather.denni_teplota}</p>
+  <p>Day temperature: ${dayWeather.denni_teplota}&deg;C</p>
   <p>Current condition: ${dayWeather.stav_pocasi}</p>
-  <a href="./detail.html#${dayWeather.id}">detailed forecast for the day</a>
+  <a href="./detail.html#${dayWeather.id}">more information...</a>
   `
 })

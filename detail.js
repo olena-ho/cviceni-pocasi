@@ -93,7 +93,6 @@ const predpoved = [
  ];
 
 const currentDay = window.location.hash.slice(1);
-console.log(currentDay)
 
 const currentDayData = predpoved.find((dayWeather) => dayWeather.id === currentDay)
 
@@ -101,6 +100,11 @@ const detailObject = document.querySelector('.detail')
 console.log(currentDayData.den)
 detailObject.innerHTML = `
   <h1>${currentDayData.den}</h1>
+  <p>Prediction: ${currentDayData.popis_pocasi}</p>
   <p>Morning temperature: ${currentDayData.ranni_teplota}&deg;C</p>
+  <p>Afternoon temperature: ${currentDayData.odpoledni_teplota}&deg;C</p>
+  <p>Evening temperature: ${currentDayData.vecerni_teplota}&deg;C</p>
+  <p>Current condition: ${currentDayData.stav_pocasi}</p>
+  <p>Pressure: ${currentDayData.tlak}</p>
 `
 //Na stránce se zobrazí název dne, teploty ráno, odpoledne a večer, stav jako zataženo, déšť apod., vlhkost, tlak a slovní popis počasí.
